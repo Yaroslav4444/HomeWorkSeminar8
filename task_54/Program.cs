@@ -22,32 +22,6 @@ int[,] Generate2dArray(int height, int width, int minValue, int maxValue)
     }
     return twoDArray;
 }
-
-void PrintColorData(string data)
-{
-    Console.ForegroundColor = ConsoleColor.Yellow;
-    Console.Write(data);
-    Console.ResetColor();
-}
-void Print2DArray(int[,] arrayToPrint)
-{
-    Console.Write(" \t");
-    for (int i = 0; i < arrayToPrint.GetLength(1); i++)
-    {
-        PrintColorData(i + "\t");
-    }
-    Console.WriteLine();
-    for (int i = 0; i < arrayToPrint.GetLength(0); i++)
-    {
-        PrintColorData(i + "\t");
-        for (int j = 0; j < arrayToPrint.GetLength(1); j++)
-        {
-            Console.Write(arrayToPrint[i, j] + "\t");
-        }
-        Console.WriteLine();
-    }
-    Console.WriteLine();
-}
 int[] SortedLengthArray(int[] inputArray)
 {
     for (int i = 0; i < inputArray.Length; i++)
@@ -82,6 +56,31 @@ int[,] CreateSortedArray(int[,] inputArray)
         }
     }
     return inputArray;
+}
+void PrintColorData(string data)
+{
+    Console.ForegroundColor = ConsoleColor.Yellow;
+    Console.Write(data);
+    Console.ResetColor();
+}
+void Print2DArray(int[,] arrayToPrint)
+{
+    Console.Write(" \t");
+    for (int i = 0; i < arrayToPrint.GetLength(1); i++)
+    {
+        PrintColorData(i + "\t");
+    }
+    Console.WriteLine();
+    for (int i = 0; i < arrayToPrint.GetLength(0); i++)
+    {
+        PrintColorData(i + "\t");
+        for (int j = 0; j < arrayToPrint.GetLength(1); j++)
+        {
+            Console.Write(arrayToPrint[i, j] + "\t");
+        }
+        Console.WriteLine();
+    }
+    Console.WriteLine();
 }
 
 Console.WriteLine("Задан массив :");
